@@ -1,2 +1,0 @@
-Practical Machine Learning Tutorial with Python Intro p.1	Sun Aug 26 14:08:32 2018
-Regression Intro - Practical Machine Learning Tutorial with Python p.2	Sun Aug 26 14:46:27 2018

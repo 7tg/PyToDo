@@ -7,10 +7,10 @@ import time
 ver = "0.02"
 
 
-def readTodo():
+def readTodo(file):
     """Function for read todo.txt and turn it into a tuple list with counts
     Ex: [(1,"Blah Blah"),(2,"Blah Blah")]"""
-    _file = open('todo.txt', 'r')
+    _file = open(file, 'r')
     file = _file.readlines()
     _file.close()
     lines = []
@@ -27,6 +27,20 @@ def readDone():
     for line in file:
         lines.append(line.strip())
     return lines
+
+
+def selectFile(folder):
+    item_list = os.listdir("./" + folder + "/")
+    item_enum = list(enumerate(item_list, 1))
+    for count, item in item_enum:
+        print("[" + str(count) + "]\t" + item)
+    select = int(input("Select file to read->    ")) - 1
+    if select > len(item_enum) or select < 0:
+        print("Input is out of index!")
+        wait()
+        selectFile()
+    _, file_name = item_enum[select]
+    return os.getcwd() + "/" + folder + "/" + file_name
 
 
 def wait():
@@ -54,7 +68,7 @@ def printMenu():
 
 def listToDo():
     clear()
-    todo = readTodo()
+    todo = readTodo(selectFile("todo"))
     for count, line in todo:
         print("[" + str(count) + "]\t" + line)
 
@@ -78,7 +92,6 @@ def removeToDo():
     # Checking 0
     main() if 0 in select else 0
 
-    print(select)
     # Checking if the select is out of index
     if max(select) > len(todo) or min(select) < 1:
         print("Input is out of index!")
