@@ -1,5 +1,3 @@
-Practical Machine Learning Tutorial with Python Intro p.1
-Regression Intro - Practical Machine Learning Tutorial with Python p.2
 Regression Features and Labels - Practical Machine Learning Tutorial with Python p.3
 Regression Training and Testing - Practical Machine Learning Tutorial with Python p.4
 Regression forecasting and predicting - Practical Machine Learning Tutorial with Python p.5

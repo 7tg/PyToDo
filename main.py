@@ -4,7 +4,7 @@ import platform
 import time
 
 
-ver = "0.01"
+ver = "0.02"
 
 
 def readTodo():
@@ -42,14 +42,14 @@ def clear():
 
 
 def printMenu():
-    print("-------		Py To-Do	-------")
-    print("-------		ver {}	-------".format(ver))
-    print("-------		   TG   	-------")
-    print()
-    print("[1]	List To-Do")
-    print("[2]	Remove item from To-Do")
-    print("[3]	List Done")
-    print("[0]	Exit")
+    print("-------      Py To-Do    -------")
+    print("-------      ver {}  -------".format(ver))
+    print("-------         TG       -------")
+    print("")
+    print("[1]  List To-Do")
+    print("[2]  Remove item from To-Do")
+    print("[3]  List Done")
+    print("[0]  Exit")
 
 
 def listToDo():
@@ -70,10 +70,17 @@ def removeToDo():
     clear()
     listToDo()
     todo = readTodo()
-    select = int(input("Select item to remove-> 	"))
+    print("\nSingle [1] or [1,2,3,4,5], [0] to return to main menu")
 
+    select = list(map(lambda x: int(x), input(
+        "Select item to remove->    ").split(',')))
+
+    # Checking 0
+    main() if 0 in select else 0
+
+    print(select)
     # Checking if the select is out of index
-    if select > len(todo) or select < 1:
+    if max(select) > len(todo) or min(select) < 1:
         print("Input is out of index!")
         wait()
         removeToDo()
@@ -81,25 +88,25 @@ def removeToDo():
     # Removing item from todo.txt
     todoFile = open('todo.txt', 'w')
     for count, line in todo:
-        if count == select:
+        if count in select:
             continue
         todoFile.write(line + "\n")
     todoFile.close()
 
     # Writing item to done.txt
     doneFile = open('done.txt', 'a')
-    _, line = todo[select - 1]
-    doneFile.write(
-        line + "\t" + time.asctime(time.localtime(time.time())) + "\n")
+    for count, line in todo:
+        if count in select:
+            doneFile.write(
+                line + "\t" + time.asctime(time.localtime(time.time())) + "\n")
+            print("Removed [" + line + "] from todo.txt, Good Job!")
     doneFile.close()
-
-    print("Removed [" + line + "] from todo.txt, Good Job!")
 
 
 def main():
     clear()
     printMenu()
-    select = input("->	")
+    select = input("->  ")
     if select == "1":
         listToDo()
         wait()
