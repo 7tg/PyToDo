@@ -1,0 +1,71 @@
+Regression Intro - Practical Machine Learning Tutorial with Python p.2
+Regression Features and Labels - Practical Machine Learning Tutorial with Python p.3
+Regression Training and Testing - Practical Machine Learning Tutorial with Python p.4
+Regression forecasting and predicting - Practical Machine Learning Tutorial with Python p.5
+Pickling and Scaling - Practical Machine Learning Tutorial with Python p.6
+Regression How it Works - Practical Machine Learning Tutorial with Python p.7
+How to program the Best Fit Slope - Practical Machine Learning Tutorial with Python p.8
+How to program the Best Fit Line - Practical Machine Learning Tutorial with Python p.9
+R Squared Theory - Practical Machine Learning Tutorial with Python p.10
+Programming R Squared - Practical Machine Learning Tutorial with Python p.11
+Testing Assumptions - Practical Machine Learning Tutorial with Python p.12
+Classification w/ K Nearest Neighbors Intro - Practical Machine Learning Tutorial with Python p.13
+K Nearest Neighbors Application - Practical Machine Learning Tutorial with Python p.14
+Euclidean Distance - Practical Machine Learning Tutorial with Python p.15
+Creating Our K Nearest Neighbors Algorithm - Practical Machine Learning with Python p.16
+Writing our own K Nearest Neighbors in Code - Practical Machine Learning Tutorial with Python p.17
+Applying our K Nearest Neighbors Algorithm - Practical Machine Learning Tutorial with Python p.18
+Final thoughts on K Nearest Neighbors - Practical Machine Learning Tutorial with Python p.19
+Support Vector Machine Intro and Application  - Practical Machine Learning Tutorial with Python p.20
+Understanding Vectors - Practical Machine Learning Tutorial with Python p.21
+Support Vector Assertion - Practical Machine Learning Tutorial with Python p.22
+Support Vector Machine Fundamentals - Practical Machine Learning Tutorial with Python p.23
+Support Vector Machine Optimization - Practical Machine Learning Tutorial with Python p.24
+Creating an SVM from scratch - Practical Machine Learning Tutorial with Python p.25
+SVM Training - Practical Machine Learning Tutorial with Python p.26
+SVM Optimization - Practical Machine Learning Tutorial with Python p.27
+Completing SVM from Scratch - Practical Machine Learning Tutorial with Python p.28
+Kernels Introduction - Practical Machine Learning Tutorial with Python p.29
+Why Kernels - Practical Machine Learning Tutorial with Python p.30
+Soft Margin SVM - Practical Machine Learning Tutorial with Python p.31
+Soft Margin SVM and Kernels with CVXOPT - Practical Machine Learning Tutorial with Python p.32
+SVM Parameters - Practical Machine Learning Tutorial with Python p.33
+Clustering Introduction - Practical Machine Learning Tutorial with Python p.34
+Handling Non-Numeric Data - Practical Machine Learning Tutorial with Python p.35
+K Means with Titanic Dataset - Practical Machine Learning Tutorial with Python p.36
+Custom K Means - Practical Machine Learning Tutorial with Python p.37
+K Means from Scratch - Practical Machine Learning Tutorial with Python p.38
+Mean Shift Intro - Practical Machine Learning Tutorial with Python p.39
+Mean Shift with Titanic Dataset - Practical Machine Learning Tutorial with Python p.40
+Mean Shift from Scratch - Practical Machine Learning Tutorial with Python p.41
+Mean Shift Dynamic Bandwidth - Practical Machine Learning Tutorial with Python p.42
+Deep Learning with Neural Networks and TensorFlow Introduction
+Installing TensorFlow (OPTIONAL) - Deep Learning with Neural Networks and TensorFlow p2.1
+TensorFlow Basics - Deep Learning with Neural Networks p. 2
+Neural Network Model - Deep Learning with Neural Networks and TensorFlow
+Running our Network  - Deep Learning with Neural Networks and TensorFlow
+Processing our own Data - Deep Learning with Neural Networks and TensorFlow part 5
+Preprocessing cont'd - Deep Learning with Neural Networks and TensorFlow part 6
+Training/Testing on our Data - Deep Learning with Neural Networks and TensorFlow part 7
+Using More Data - Deep Learning with Neural Networks and TensorFlow part 8
+Installing the GPU version of TensorFlow for making use of your CUDA GPU
+Installing CPU and GPU TensorFlow on Windows
+Recurrent Neural Networks (RNN) - Deep Learning with Neural Networks and TensorFlow 10
+RNN Example in Tensorflow - Deep Learning with Neural Networks 11
+Convolutional Neural Networks Basics - Deep Learning withTensorFlow 12
+Convolutional Neural Networks with TensorFlow - Deep Learning with Neural Networks 13
+TFLearn - Deep Learning with Neural Networks and TensorFlow p. 14
+Intro - Training a neural network to play a game with TensorFlow and Open AI
+Training Data - Training a neural network to play a game with TensorFlow and Open AI p.2
+Training Model - Training a neural network to play a game with TensorFlow and Open AI p.3
+Testing Network - Training a neural network to play a game with TensorFlow and Open AI p.4
+Intro and preprocessing - Using Convolutional Neural Network to Identify Dogs vs Cats p. 1
+Building the Network - Using Convolutional Neural Network to Identify Dogs vs Cats p. 2
+Training - Using Convolutional Neural Network to Identify Dogs vs Cats p. 3
+Using our Network - Using Convolutional Neural Network to Identify Dogs vs Cats p. 4
+Introduction - 3D Convolutional Neural Network w/ Kaggle Lung Cancer Detection Competiton p.1
+Reading Files - 3D Convolutional Neural Network w/ Kaggle and 3D medical imaging p.2
+Visualizing - 3D Convolutional Neural Network w/ Kaggle and 3D medical imaging p.3
+Resizing Data - 3D Convolutional Neural Network w/ Kaggle and 3D medical imaging p.4
+Preprocessing data - 3D Convolutional Neural Network w/ Kaggle and 3D medical imaging p.5
+Running the Network - 3D Convolutional Neural Network w/ Kaggle and 3D medical imaging p.6
