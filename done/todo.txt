@@ -3,3 +3,4 @@ Regression Intro - Practical Machine Learning Tutorial with Python p.2	Sun Aug 2
 Regression Features and Labels - Practical Machine Learning Tutorial with Python p.3	Sun Aug 26 17:32:16 2018
 Regression Training and Testing - Practical Machine Learning Tutorial with Python p.4	Sun Aug 26 17:32:16 2018
 Regression forecasting and predicting - Practical Machine Learning Tutorial with Python p.5	Sun Aug 26 17:32:16 2018
+Regression How it Works - Practical Machine Learning Tutorial with Python p.7	Sun Aug 26 23:41:11 2018

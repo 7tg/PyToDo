@@ -19,8 +19,8 @@ def readTodo(file):
     return list(enumerate(lines, 1))
 
 
-def readDone():
-    _file = open('done.txt', 'r')
+def readDone(file):
+    _file = open(file, 'r')
     file = _file.readlines()
     _file.close()
     lines = []
@@ -68,22 +68,24 @@ def printMenu():
 
 def listToDo():
     clear()
-    todo = readTodo(selectFile("todo"))
+    file = selectFile("todo")
+    todo = readTodo(file)
     for count, line in todo:
         print("[" + str(count) + "]\t" + line)
+    return file
 
 
 def listDone():
     clear()
-    done = readDone()
+    done = readDone(selectFile("done"))
     for line in done:
         print(line)
 
 
 def removeToDo():
     clear()
-    listToDo()
-    todo = readTodo()
+    file = listToDo()
+    todo = readTodo(file)
     print("\nSingle [1] or [1,2,3,4,5], [0] to return to main menu")
 
     select = list(map(lambda x: int(x), input(
@@ -99,7 +101,7 @@ def removeToDo():
         removeToDo()
 
     # Removing item from todo.txt
-    todoFile = open('todo.txt', 'w')
+    todoFile = open(file, 'w')
     for count, line in todo:
         if count in select:
             continue
@@ -107,7 +109,8 @@ def removeToDo():
     todoFile.close()
 
     # Writing item to done.txt
-    doneFile = open('done.txt', 'a')
+    doneFile = open(os.getcwd() + '/done/' + \
+        file.split('/')[-1].split('.')[0] + '.txt', 'a')
     for count, line in todo:
         if count in select:
             doneFile.write(

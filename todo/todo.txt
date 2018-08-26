@@ -1,5 +1,3 @@
-Pickling and Scaling - Practical Machine Learning Tutorial with Python p.6
-Regression How it Works - Practical Machine Learning Tutorial with Python p.7
 How to program the Best Fit Slope - Practical Machine Learning Tutorial with Python p.8
 How to program the Best Fit Line - Practical Machine Learning Tutorial with Python p.9
 R Squared Theory - Practical Machine Learning Tutorial with Python p.10
