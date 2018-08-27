@@ -1,6 +1,6 @@
 dist/
 build/
-__pccache__/
+__pycache__/
 *.spec
 *.zip
 *.bat
