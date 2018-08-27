@@ -2,6 +2,11 @@
 import os
 import platform
 import time
+import sys
+from colorama import init
+init(strip=not sys.stdout.isatty())  # strip colors if stdout is redirected
+from termcolor import cprint
+from pyfiglet import figlet_format
 
 
 ver = "0.03"
@@ -33,10 +38,11 @@ def selectFile(folder):
     item_list = os.listdir("./" + folder + "/")
     item_enum = list(enumerate(item_list, 1))
     for count, item in item_enum:
-        print("[" + str(count) + "]\t" + item)
-    select = int(input("Select file to read-->    ")) - 1
+        cprint("[" + str(count) + "]\t" + item, color='cyan')
+    cprint("Select file to read-->    ", color='green', end='')
+    select = int(input()) - 1
     if select > len(item_enum) or select < 0:
-        print("Input is out of index!")
+        cprint("Input is out of index!", color='red', attrs=['bold'])
         wait()
         selectFile()
     _, file_name = item_enum[select]
@@ -57,21 +63,17 @@ def clear():
 
 
 def printMenu():
-    print("""
-██████╗ ██╗   ██╗████████╗ ██████╗       ██████╗  ██████╗ 
-██╔══██╗╚██╗ ██╔╝╚══██╔══╝██╔═══██╗      ██╔══██╗██╔═══██╗
-██████╔╝ ╚████╔╝    ██║   ██║   ██║█████╗██║  ██║██║   ██║
-██╔═══╝   ╚██╔╝     ██║   ██║   ██║╚════╝██║  ██║██║   ██║
-██║        ██║      ██║   ╚██████╔╝      ██████╔╝╚██████╔╝
-╚═╝        ╚═╝      ╚═╝    ╚═════╝       ╚═════╝  ╚═════╝                                                       
-""")
-    print("""----------------------   ver {}  -----------------------""".format(ver))
-    print("""----------------------    By. TG   -----------------------""")
+    cprint(figlet_format('PyTo-Do', font='larry3d'),
+           'green', attrs=['bold'])
+    cprint("""----------------------   ver {}  -----------------------""".format(ver),
+           color='yellow')
+    cprint("""----------------------    By. TG   -----------------------""",
+           color='cyan')
     print("")
-    print("[1]  List To-Do")
-    print("[2]  Remove item from To-Do")
-    print("[3]  List Done")
-    print("[0]  Exit")
+    cprint("[1]  List To-Do", color='green', attrs=['bold'])
+    cprint("[2]  Remove item from To-Do", color='cyan', attrs=['bold'])
+    cprint("[3]  List Done", color='magenta', attrs=['bold'])
+    cprint("[0]  Exit", color='red', attrs=['bold'])
 
 
 def listToDo():
@@ -79,7 +81,7 @@ def listToDo():
     file = selectFile("todo")
     todo = readTodo(file)
     for count, line in todo:
-        print("[" + str(count) + "]\t" + line)
+        cprint("[" + str(count) + "]\t" + line, color='cyan')
     return file
 
 
@@ -87,24 +89,25 @@ def listDone():
     clear()
     done = readDone(selectFile("done"))
     for line in done:
-        print(line)
+        cprint(line, color='cyan')
 
 
 def removeToDo():
     clear()
     file = listToDo()
     todo = readTodo(file)
-    print("\nSingle [1] or [1,2,3,4,5], [0] to return to main menu")
+    cprint(
+        "\nSingle [1] or [1,2,3,4,5], [0] to return to main menu", color='yellow')
 
-    select = list(map(lambda x: int(x), input(
-        "Select item to remove-->    ").split(',')))
+    cprint("Select item to remove-->    ", color='green', end='')
+    select = list(map(lambda x: int(x), input().split(',')))
 
     # Checking 0
     main() if 0 in select else 0
 
     # Checking if the select is out of index
     if max(select) > len(todo) or min(select) < 1:
-        print("Input is out of index!")
+        cprint("Input is out of index!", color='red', attrs=['bold'])
         wait()
         removeToDo()
 
@@ -123,14 +126,16 @@ def removeToDo():
         if count in select:
             doneFile.write(
                 line + "\t" + time.asctime(time.localtime(time.time())) + "\n")
-            print("Removed [" + line + "] from todo.txt, Good Job!")
+            cprint(
+                "Removed [" + line + "] from todo.txt, Good Job!", color='cyan', attrs=['bold'])
     doneFile.close()
 
 
 def main():
     clear()
     printMenu()
-    select = input("-->  ")
+    cprint("-->  ", color='green', end='', attrs=['bold'])
+    select = input()
     if select == "1":
         listToDo()
         wait()
@@ -141,7 +146,7 @@ def main():
         listDone()
         wait()
     elif select == "0":
-        print("\nHave a good day..")
+        cprint("\nHave a good day..", color='cyan', attrs=['bold'])
         exit()
     main()
 
