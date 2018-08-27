@@ -4,13 +4,13 @@ import platform
 import time
 
 
-ver = "0.02"
+ver = "0.03"
 
 
 def readTodo(file):
     """Function for read todo.txt and turn it into a tuple list with counts
     Ex: [(1,"Blah Blah"),(2,"Blah Blah")]"""
-    _file = open(file, 'r')
+    _file = open(file, 'r', encoding='utf8')
     file = _file.readlines()
     _file.close()
     lines = []
@@ -20,7 +20,7 @@ def readTodo(file):
 
 
 def readDone(file):
-    _file = open(file, 'r')
+    _file = open(file, 'r', encoding='utf8')
     file = _file.readlines()
     _file.close()
     lines = []
@@ -40,6 +40,7 @@ def selectFile(folder):
         wait()
         selectFile()
     _, file_name = item_enum[select]
+    clear()
     return os.getcwd() + "/" + folder + "/" + file_name
 
 
@@ -56,9 +57,16 @@ def clear():
 
 
 def printMenu():
-    print("-------      Py To-Do    -------")
-    print("-------      ver {}  -------".format(ver))
-    print("-------         TG       -------")
+    print("""
+██████╗ ██╗   ██╗████████╗ ██████╗       ██████╗  ██████╗ 
+██╔══██╗╚██╗ ██╔╝╚══██╔══╝██╔═══██╗      ██╔══██╗██╔═══██╗
+██████╔╝ ╚████╔╝    ██║   ██║   ██║█████╗██║  ██║██║   ██║
+██╔═══╝   ╚██╔╝     ██║   ██║   ██║╚════╝██║  ██║██║   ██║
+██║        ██║      ██║   ╚██████╔╝      ██████╔╝╚██████╔╝
+╚═╝        ╚═╝      ╚═╝    ╚═════╝       ╚═════╝  ╚═════╝                                                       
+""")
+    print("""----------------------   ver {}  -----------------------""".format(ver))
+    print("""----------------------    By. TG   -----------------------""")
     print("")
     print("[1]  List To-Do")
     print("[2]  Remove item from To-Do")
@@ -101,7 +109,7 @@ def removeToDo():
         removeToDo()
 
     # Removing item from todo.txt
-    todoFile = open(file, 'w')
+    todoFile = open(file, 'w', encoding='utf8')
     for count, line in todo:
         if count in select:
             continue
@@ -109,8 +117,8 @@ def removeToDo():
     todoFile.close()
 
     # Writing item to done.txt
-    doneFile = open(os.getcwd() + '/done/' + \
-        file.split('/')[-1].split('.')[0] + '.txt', 'a')
+    doneFile = open(os.getcwd() + '/done/' +
+                    file.split('/')[-1].split('.')[0] + '.txt', 'a', encoding='utf8')
     for count, line in todo:
         if count in select:
             doneFile.write(
