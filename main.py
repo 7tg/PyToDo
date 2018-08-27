@@ -34,7 +34,7 @@ def selectFile(folder):
     item_enum = list(enumerate(item_list, 1))
     for count, item in item_enum:
         print("[" + str(count) + "]\t" + item)
-    select = int(input("Select file to read->    ")) - 1
+    select = int(input("Select file to read-->    ")) - 1
     if select > len(item_enum) or select < 0:
         print("Input is out of index!")
         wait()
@@ -97,7 +97,7 @@ def removeToDo():
     print("\nSingle [1] or [1,2,3,4,5], [0] to return to main menu")
 
     select = list(map(lambda x: int(x), input(
-        "Select item to remove->    ").split(',')))
+        "Select item to remove-->    ").split(',')))
 
     # Checking 0
     main() if 0 in select else 0
@@ -130,7 +130,7 @@ def removeToDo():
 def main():
     clear()
     printMenu()
-    select = input("->  ")
+    select = input("-->  ")
     if select == "1":
         listToDo()
         wait()

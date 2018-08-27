@@ -7,21 +7,27 @@ python main.py
 ```
 
 ## Usage
-### This is the welcome screen
+### Start Screen
 ```
--------         Py To-Do        -------                                                                                                                                                                                             
--------         ver 0.01        -------                                                                                                                                                                                             
--------            TG           -------                                                                                                                                                                                             
-                                                                                                                                                                                                                                    
-[1]     List To-Do                                                                                                                                                                                                                  
-[2]     Remove item from To-Do                                                                                                                                                                                                      
-[3]     List Done                                                                                                                                                                                                                   
-[0]     Exit                                                                                                                                                                                                                        
-->      [Input your selection]
+██████╗ ██╗   ██╗████████╗ ██████╗       ██████╗  ██████╗
+██╔══██╗╚██╗ ██╔╝╚══██╔══╝██╔═══██╗      ██╔══██╗██╔═══██╗
+██████╔╝ ╚████╔╝    ██║   ██║   ██║█████╗██║  ██║██║   ██║
+██╔═══╝   ╚██╔╝     ██║   ██║   ██║╚════╝██║  ██║██║   ██║
+██║        ██║      ██║   ╚██████╔╝      ██████╔╝╚██████╔╝
+╚═╝        ╚═╝      ╚═╝    ╚═════╝       ╚═════╝  ╚═════╝
+
+----------------------   ver 0.03  -----------------------
+----------------------    By. TG   -----------------------
+
+[1]  List To-Do
+[2]  Remove item from To-Do
+[3]  List Done
+[0]  Exit
+-->  0
 ```
 
 ## Todo
-Every line in the todo.txt will be treated as an individual item
+Todo list must be in the folder "todo/", every line in the files will be treated as an indiviual item
 Example todo.txt:
 ```
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
