@@ -4,12 +4,11 @@ import platform
 import time
 import sys
 from colorama import init
-init(strip=not sys.stdout.isatty())  # strip colors if stdout is redirected
 from termcolor import cprint
-from pyfiglet import figlet_format
+init(strip=not sys.stdout.isatty())  # strip colors if stdout is redirected
 
 
-ver = "0.03"
+ver = "0.05"
 
 
 def readTodo(file):
@@ -40,7 +39,12 @@ def selectFile(folder):
     for count, item in item_enum:
         cprint("[" + str(count) + "]\t" + item, color='cyan')
     cprint("Select file to read-->    ", color='green', end='')
-    select = int(input()) - 1
+
+    inpt = input()
+    if len(inpt) < 1:
+        return selectFile(folder)
+
+    select = int(inpt) - 1
     if select > len(item_enum) or select < 0:
         cprint("Input is out of index!", color='red', attrs=['bold'])
         wait()
@@ -63,7 +67,14 @@ def clear():
 
 
 def printMenu():
-    cprint(figlet_format('PyTo-Do', font='larry3d'),
+    cprint("""
+██████╗ ██╗   ██╗    ████████╗ ██████╗       ██████╗  ██████╗ 
+██╔══██╗╚██╗ ██╔╝    ╚══██╔══╝██╔═══██╗      ██╔══██╗██╔═══██╗
+██████╔╝ ╚████╔╝        ██║   ██║   ██║█████╗██║  ██║██║   ██║
+██╔═══╝   ╚██╔╝         ██║   ██║   ██║╚════╝██║  ██║██║   ██║
+██║        ██║          ██║   ╚██████╔╝      ██████╔╝╚██████╔╝
+╚═╝        ╚═╝          ╚═╝    ╚═════╝       ╚═════╝  ╚═════╝                                                      
+""",
            'green', attrs=['bold'])
     cprint("""----------------------   ver {}  -----------------------""".format(ver),
            color='yellow')
@@ -82,6 +93,7 @@ def listToDo():
     todo = readTodo(file)
     for count, line in todo:
         cprint("[" + str(count) + "]\t" + line, color='cyan')
+    cprint("\nTotal to-do's : " + str(len(todo)), color='magenta')
     return file
 
 
@@ -90,6 +102,7 @@ def listDone():
     done = readDone(selectFile("done"))
     for line in done:
         cprint(line, color='cyan')
+    cprint("\nTotal done : " + str(len(done)), color='magenta')
 
 
 def removeToDo():

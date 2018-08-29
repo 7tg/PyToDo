@@ -1,0 +1,32 @@
+01 -- Matplotlib Tutorial 1 - Introduction and Line.mp4
+02 -- Matplotlib Tutorial 2 - Legends titles and labels.mp4
+03 -- Matplotlib Tutorial 3   bar charts and histograms.mp4
+04 -- Matplotlib Tutorial 4 - Scatter Plots.mp4
+05 -- Matplotlib Tutorial 5 - stack plots.mp4
+06 -- Matplotlib Tutorial 6 - Pie Charts.mp4
+07 -- Matplotlib Tutorial 7 - loading data from files.mp4
+08 -- Matplotlib Tutorial 8 - getting data from the internet.mp4
+09 -- Matplotlib Tutorial 9 - converting data from the internet.mp4
+10 -- Matplotlib Tutorial 10 - basic customizations, rotating labels.mp4
+11 -- Matplotlib Tutorial 11 - handling unix time.mp4
+12 -- Matplotlib Tutorial 12 - more customization of colors and fills.mp4
+13 -- Matplotlib Tutorial 13 - spines and horizontal lines.mp4
+14 -- Matplotlib Tutorial 14 - candlestick OHLC graphs.mp4
+15 -- Matplotlib Tutorial 15 - styles.mp4
+16 -- Matplotlib Tutorial 16 - Live graphs.mp4
+17 -- Matplotlib Tutorial 17 - annotations and placing text.mp4
+18 -- Matplotlib Tutorial 18 - annotating last price to edge of matplotlib graph example.mp4
+19 -- Matplotlib Tutorial 19 - subplots.mp4
+20 -- Matplotlib Tutorial 20 - implementing subplots to our stock chart.mp4
+21 -- Matplotlib Tutorial 21 - adding more indicator data to our charts.mp4
+22 -- Matplotlib Tutorial 22 - cleaning chart, custom fills, pruning.mp4
+23 -- Matplotlib Tutorial 23 - sharex axis.mp4
+24 -- Matplotlib Tutorial 24 - multi y axis plotting volume on stock chart.mp4
+25 -- Matplotlib Tutorial 25 - customizing Matplotlib Legends.mp4
+26 -- Matplotlib Tutorial 26 - Basemap intro.mp4
+27 -- Matplotlib Tutorial 27 - Basemap customization options.mp4
+28 -- Matplotlib Tutorial 28 - plotting coordinates on a map with Basemap.mp4
+29 -- Matplotlib Tutorial 29 - matplotlib 3d intro.mp4
+30 -- Matplotlib Tutorial 30 - 3d scatter plot.mp4
+31 -- Matplotlib Tutorial 31 - 3d bar charts.mp4
+32 -- Matplotlib Tutorial 32 - conclusion.mp4

@@ -1,0 +1,21 @@
+01 -- Natural Language Processing With Python and NLTK p.1 Tokenizing words and Sentences.mp4
+02 -- Stop Words - Natural Language Processing With Python and NLTK p.2.mp4
+03 -- Stemming - Natural Language Processing With Python and NLTK p.3.mp4
+04 -- Part of Speech Tagging - Natural Language Processing With Python and NLTK p.4.mp4
+05 -- Chunking - Natural Language Processing With Python and NLTK p.5.mp4
+06 -- Chinking - Natural Language Processing With Python and NLTK p.6.mp4
+07 -- Named Entity Recognition - Natural Language Processing With Python and NLTK p.7.mp4
+08 -- Lemmatizing - Natural Language Processing With Python and NLTK p.8.mp4
+09 -- NLTK Corpora - Natural Language Processing With Python and NLTK p.9.mp4
+10 -- WordNet  - Natural Language Processing With Python and NLTK p.10.mp4
+11 -- Text Classification - Natural Language Processing With Python and NLTK p.11.mp4
+12 -- Words as Features for Learning - Natural Language Processing With Python and NLTK p.12.mp4
+13 -- Naive Bayes - Natural Language Processing With Python and NLTK p.13.mp4
+14 -- Save Classifier with Pickle  - Natural Language Processing With Python and NLTK p.14.mp4
+15 -- Scikit-Learn incorporation - Natural Language Processing With Python and NLTK p.15.mp4
+16 -- Combining Algos with a Vote - Natural Language Processing With Python and NLTK p.16.mp4
+17 -- Investigating Bias - Natural Language Processing With Python and NLTK p.17.mp4
+18 -- Better training data - Natural Language Processing With Python and NLTK p.18.mp4
+19 -- Sentiment Analysis Module - Natural Language Processing With Python and NLTK p.19.mp4
+20 -- Twitter Sentiment Analysis - Natural Language Processing With Python and NLTK p.20.mp4
+21 -- Graphing Live Twitter Sentiment - Language Processing With Python and NLTK p.21.mp4

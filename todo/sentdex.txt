@@ -1,8 +1,3 @@
-How to program the Best Fit Slope - Practical Machine Learning Tutorial with Python p.8
-How to program the Best Fit Line - Practical Machine Learning Tutorial with Python p.9
-R Squared Theory - Practical Machine Learning Tutorial with Python p.10
-Programming R Squared - Practical Machine Learning Tutorial with Python p.11
-Testing Assumptions - Practical Machine Learning Tutorial with Python p.12
 Classification w/ K Nearest Neighbors Intro - Practical Machine Learning Tutorial with Python p.13
 K Nearest Neighbors Application - Practical Machine Learning Tutorial with Python p.14
 Euclidean Distance - Practical Machine Learning Tutorial with Python p.15

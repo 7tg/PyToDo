@@ -1,0 +1,56 @@
+11. Introduction to Shell
+12. Understanding the Initramfs
+13. Basic Linux Command
+14. Basic Linux Command
+15. Basic Linux Command
+16. Text Editor in Linux
+17. Linux IO Redirection
+2. 1.Chapter 2 Package Management in Linux:
+1. Package Management Using RPM
+2. RPM basic commands
+3. Introduction to yum
+5. Managing yum repositories
+7. Yum advance commands
+8. Setup local yum repository
+9. Setup yum server
+10. Setup yum client
+6. Yum install remove upgrade the packages
+4. Yum queries
+3. Process Monitoring and Performance Tuning:
+3. Dynamic real-time process view
+4. Dynamic real-time process view_2
+5. Process Status
+6. Filtering Exact Process by High CPU and Memory
+7. Find Disk Usage using du Command
+8. Understanding Linux CPU Load
+9. Understanding the proc file System
+10. Performance Monitoring with Vmstat and lostat
+11. Managing Process Priority
+2. Managing services in Linux
+1. Introduction to Process in Linux
+4. Advance File System Management:
+1. Managing disk in Linux
+2. Overview of swap partion in Linux
+3. Creating swap partition using disk
+4. Swap Partition using File
+5. Overview of Logical Volume Manager (LVM)
+6. Understanding the LVM
+7. Extending the LVM Logical Partition
+8. Reducing the LVM Logical Partition
+9. Recover deleted LVM Partitions
+10. Managing LVM volume using System Storage Manager
+11. Extend non LVM Partition using Parted
+5. Managing Services on Linux:
+1. Managing Services on Linux with systemd
+6. User Administration:
+1. Managing user and group in Linux part – 1
+2. Managing user and group in Linux part – 2
+3. Managing users access using visudo
+7. Managing Secure Shell:
+1. Understanding the  secure shell
+2. Understanding the public and private key part – 1
+3. SSH Public and Private Key
+4. Setup passwordless SSH login in Linux
+8. Scheduling Task in Linux:
+1. Scheduling task in Linux using cron part – 1
+2. Scheduling task in Linux using cron part - 2

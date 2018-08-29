@@ -4,3 +4,8 @@ Regression Features and Labels - Practical Machine Learning Tutorial with Python
 Regression Training and Testing - Practical Machine Learning Tutorial with Python p.4	Sun Aug 26 17:32:16 2018
 Regression forecasting and predicting - Practical Machine Learning Tutorial with Python p.5	Sun Aug 26 17:32:16 2018
 Regression How it Works - Practical Machine Learning Tutorial with Python p.7	Sun Aug 26 23:41:11 2018
+How to program the Best Fit Slope - Practical Machine Learning Tutorial with Python p.8	Tue Aug 28 14:05:44 2018
+How to program the Best Fit Line - Practical Machine Learning Tutorial with Python p.9	Tue Aug 28 14:05:44 2018
+R Squared Theory - Practical Machine Learning Tutorial with Python p.10	Wed Aug 29 10:39:28 2018
+Programming R Squared - Practical Machine Learning Tutorial with Python p.11	Wed Aug 29 10:39:28 2018
+Testing Assumptions - Practical Machine Learning Tutorial with Python p.12	Wed Aug 29 10:39:28 2018

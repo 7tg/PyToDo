@@ -1,0 +1,10 @@
+1. Introduction to Linux:	Wed Aug 29 10:38:34 2018
+1. Introduction to linux	Wed Aug 29 10:38:34 2018
+3. Update Kernel Version on Centos 7 Manually	Wed Aug 29 10:38:34 2018
+4. Update Kernel Version on CentOs 7 Yum	Wed Aug 29 10:38:34 2018
+5. Installation of Centos7	Wed Aug 29 10:38:34 2018
+6. Reset Root Password	Wed Aug 29 10:38:34 2018
+7. Understanding the GRUB2 #Part 1	Wed Aug 29 10:38:34 2018
+8. Understanding the GRUB2 #Part 2	Wed Aug 29 10:38:34 2018
+9. Understanding the GRUB2 #Part3	Wed Aug 29 10:38:34 2018
+10. Linux Directory Structure	Wed Aug 29 12:00:06 2018
