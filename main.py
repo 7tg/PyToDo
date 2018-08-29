@@ -94,6 +94,7 @@ def printMenu():
     cprint("[2]  Remove item from To-Do", color='cyan', attrs=['bold'])
     cprint("[3]  List Done", color='magenta', attrs=['bold'])
     cprint("[4]  Recover from Done", color='blue', attrs=['bold'])
+    print()
     cprint("[9]  Help", color='white', attrs=['bold'])
     cprint("[0]  Exit", color='red', attrs=['bold'])
 
