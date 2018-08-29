@@ -30,7 +30,7 @@ def readDone(file):
     lines = []
     for line in file:
         lines.append(line.strip())
-    return lines
+    return list(enumerate(lines, 1))
 
 
 def selectFile(folder):
@@ -66,6 +66,16 @@ def clear():
         os.system('clear')
 
 
+def help():
+    clear()
+    cprint("""Hi, this is the help text!
+In order to see your to-do lists, you need to place them under the "todo/"
+folder, your done jobs will be listed under "done/" folder.
+For further questions contact me on GitHub :).
+        """,
+           color='cyan')
+
+
 def printMenu():
     cprint("""
 ██████╗ ██╗   ██╗    ████████╗ ██████╗       ██████╗  ██████╗ 
@@ -73,17 +83,18 @@ def printMenu():
 ██████╔╝ ╚████╔╝        ██║   ██║   ██║█████╗██║  ██║██║   ██║
 ██╔═══╝   ╚██╔╝         ██║   ██║   ██║╚════╝██║  ██║██║   ██║
 ██║        ██║          ██║   ╚██████╔╝      ██████╔╝╚██████╔╝
-╚═╝        ╚═╝          ╚═╝    ╚═════╝       ╚═════╝  ╚═════╝                                                      
-""",
+╚═╝        ╚═╝          ╚═╝    ╚═════╝       ╚═════╝  ╚═════╝  """,
            'green', attrs=['bold'])
-    cprint("""----------------------   ver {}  -----------------------""".format(ver),
+    cprint("""  ----------------------   ver {}  -----------------------  """.format(ver),
            color='yellow')
-    cprint("""----------------------    By. TG   -----------------------""",
+    cprint("""      ------------------    By. TG   -------------------      """,
            color='cyan')
     print("")
     cprint("[1]  List To-Do", color='green', attrs=['bold'])
     cprint("[2]  Remove item from To-Do", color='cyan', attrs=['bold'])
     cprint("[3]  List Done", color='magenta', attrs=['bold'])
+    cprint("[4]  Recover from Done", color='blue', attrs=['bold'])
+    cprint("[9]  Help", color='white', attrs=['bold'])
     cprint("[0]  Exit", color='red', attrs=['bold'])
 
 
@@ -94,21 +105,73 @@ def listToDo():
     for count, line in todo:
         cprint("[" + str(count) + "]\t" + line, color='cyan')
     cprint("\nTotal to-do's : " + str(len(todo)), color='magenta')
-    return file
+    return file, todo
 
 
-def listDone():
+def listDone(recover=False):
     clear()
-    done = readDone(selectFile("done"))
-    for line in done:
-        cprint(line, color='cyan')
+    file = selectFile("done")
+    done = readDone(file)
+    for count, line in done:
+        if recover is True:
+            cprint("[" + str(count) + "]\t" + line, color='cyan')
+        else:
+            cprint(line, color='cyan')
+
     cprint("\nTotal done : " + str(len(done)), color='magenta')
+    return file, done
+
+
+def recoverFromDone():
+    file, done = listDone(recover=True)
+
+    cprint(
+        "\nSingle [1] or [1,2,3,4,5], [0] to return to main menu", color='yellow')
+
+    cprint("Select item to remove-->    ", color='green', end='')
+    select = list(map(lambda x: int(x), input().split(',')))
+
+    # Checking 0
+    main() if 0 in select else 0
+
+    # Checking if the select is out of index
+    if max(select) > len(done) or min(select) < 1:
+        cprint("Input is out of index!", color='red', attrs=['bold'])
+        wait()
+        recoverFromDone()
+    print(file.replace('done', 'todo'))
+    # print(done[select[0]][1].split("\t"))
+    # Restoring item from done.txt
+
+    todoFile = open(file.replace('done', 'todo'), 'r', encoding='utf8')
+    todoLines = todoFile.readlines()
+    todoFile.close()
+
+    todoFile = open(file.replace('done', 'todo'), 'w', encoding='utf8')
+    for i in select:
+        line = done[i - 1][1].split("\t")[0]
+        todoFile.write(line + "\n")
+        cprint(
+            "Recovered [" + line + "] from dodo.txt!", color='cyan', attrs=['bold'])
+    for line in todoLines:
+        todoFile.write(line)
+    todoFile.close()
+
+    doneFile = open(file, 'r', encoding='utf8')
+    doneLines = doneFile.readlines()
+    doneFile.close()
+
+    doneFile = open(file, 'w', encoding='utf8')
+    for count, line in enumerate(doneLines, 1):
+        if count in select:
+            continue
+        doneFile.write(line)
+    doneFile.close()
 
 
 def removeToDo():
     clear()
-    file = listToDo()
-    todo = readTodo(file)
+    file, todo = listToDo()
     cprint(
         "\nSingle [1] or [1,2,3,4,5], [0] to return to main menu", color='yellow')
 
@@ -147,7 +210,7 @@ def removeToDo():
 def main():
     clear()
     printMenu()
-    cprint("-->  ", color='green', end='', attrs=['bold'])
+    cprint("\n~/$>  ", color='green', end='', attrs=['bold'])
     select = input()
     if select == "1":
         listToDo()
@@ -157,6 +220,12 @@ def main():
         wait()
     elif select == "3":
         listDone()
+        wait()
+    elif select == "4":
+        recoverFromDone()
+        wait()
+    elif select == "9":
+        help()
         wait()
     elif select == "0":
         cprint("\nHave a good day..", color='cyan', attrs=['bold'])
